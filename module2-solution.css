@@ -1,0 +1,48 @@
+/* Reset some default styles */
+body, h1, h2, p {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.section {
+    border: 1px solid black;
+    margin: 10px;
+    padding: 10px;
+    box-sizing: border-box;
+    position: relative;
+}
+
+/* Desktop Layout */
+.desktop {
+    width: 31.33%; /* Equal width for three sections */
+}
+
+/* Tablet Layout */
+@media (min-width: 768px) and (max-width: 991px) {
+    .desktop {
+        display: none; /* Hide desktop sections */
+    }
+
+    .section {
+        width: 48%; /* Equal width for first two sections */
+    }
+
+    .section:nth-child(3) {
+        width: 100%; /* Full width for the third section */
+    }
+}
+
+/* Mobile Layout */
+@media (max-width: 767px) {
+    .section {
+        width: 100%; /* Full width for all sections */
+    }
+}
